@@ -29,6 +29,13 @@ public class EmployeeController {
         String Response=employeeService.CreateEmployee(employeeRequest);
         return ResponseEntity.ok(Response);
     }*/
+
+    @GetMapping("api/employees/preview-next-id")
+    @PreAuthorize("hasAnyRole('ADMIN','HR')")
+    public ResponseEntity<Map<String, String>> previewNextEmployeeId() {
+        String next = sequenceService.preview();
+        return ResponseEntity.ok(Map.of("nextEmployeeId", next));
+    }
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/api/employees/invite")
     public ResponseEntity<?> createEmployeeAndSend(@RequestBody EmployeeRequest employeeRequest) {
@@ -37,12 +44,12 @@ public class EmployeeController {
     }
 
 
-    @PreAuthorize("hasRole('ADMIN')")
-    @GetMapping("api/employees/preview-next-id")
-    public Map<String, String> nextId() {
-        String next = sequenceService.preview();// implement safely (or hardcode for now)
-        return Map.of("nextId", next);
-    }
+//    @PreAuthorize("hasRole('ADMIN')")
+//    @GetMapping("api/employees/preview-next-id")
+//    public Map<String, String> nextId() {
+//        String next = sequenceService.preview();// implement safely (or hardcode for now)
+//        return Map.of("nextId", next);
+//    }
 
 
     // 3. Activate employee by link

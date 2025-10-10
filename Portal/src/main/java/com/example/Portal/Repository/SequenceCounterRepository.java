@@ -15,4 +15,7 @@ public interface SequenceCounterRepository extends JpaRepository<SequenceCounter
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query("select s from SequenceCounter s where s.dateKey = :dateKey")
     Optional<SequenceCounter> lockByDateKey(@Param("dateKey") String dateKey);
+
+    Optional<SequenceCounter> findByDateKey(String dateKey);
+
 }

@@ -33,7 +33,7 @@ public class Employee implements UserDetails {
 
      private String designation;
     private String department;
-    @Column(name = "employeeId", nullable = false, length = 64)
+    @Column(name="employee_id", nullable=false, unique=true, length=20)
     private String employeeId;
 
     @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -55,6 +55,8 @@ public class Employee implements UserDetails {
     @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
     private EmployeeProfile profile;
 
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<TrainingEnrollment> enrollments = new LinkedHashSet<>();
     public void setHelper(EmployeeProfile profile){
         this.profile=profile;
         if(profile!=null){
@@ -171,6 +173,14 @@ public class Employee implements UserDetails {
 
     public void setOutbox(List<Outbox> outbox) {
         this.outbox = outbox;
+    }
+
+    public Set<TrainingEnrollment> getEnrollments() {
+        return enrollments;
+    }
+
+    public void setEnrollments(Set<TrainingEnrollment> enrollments) {
+        this.enrollments = enrollments;
     }
 
     @Override

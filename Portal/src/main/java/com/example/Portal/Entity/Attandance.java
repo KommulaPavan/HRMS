@@ -21,8 +21,8 @@ public class Attandance {
     private LocalDateTime checkInAt;
     private LocalDateTime checkOutAt;
     private int workMinutes;
-  //  @Column(name = "employeeId", nullable = false, length = 64)
-  //  private String employeeId;
+//    @Column(name = "employeeId", nullable = false, length = 64)
+//   private String employeeId;
     private String source;
 
 

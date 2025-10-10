@@ -31,6 +31,8 @@ public class EmployeeService {
     MailService mailService;
     @Autowired
     TokenActivation tokenActivation;
+    @Autowired
+    SequenceService sequenceService;
 
   /*  public String CreateEmployee(EmployeeRequest employeeRequest){
     if(employeeRepository.findByEmail(employeeRequest.getEmail()).isPresent()){
@@ -73,15 +75,16 @@ public class EmployeeService {
                     nr.setName(roleName);        // << correct role name
                     return roleRepository.save(nr);
                 });
-
+        String nextCode=sequenceService.assignNextId();
         // Create employee
         Employee employee = new Employee();
+        employee.setEmployeeId(nextCode);
         employee.setName(req.getName());
         employee.setEmail(req.getEmail());
         employee.setRole(Set.of(role));
         employee.setDepartment(req.getDepartment());
         employee.setDesignation(req.getDesignation());
-        employee.setEmployeeId(req.getEmployeeId());
+
         employee.setAccountStatus("pending");
 
         Employee saved = employeeRepository.save(employee);

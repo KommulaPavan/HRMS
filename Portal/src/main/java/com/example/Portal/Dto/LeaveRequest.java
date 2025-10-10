@@ -1,6 +1,8 @@
 package com.example.Portal.Dto;
 
+import com.example.Portal.Entity.Employee;
 import com.example.Portal.Entity.Leave;
+import com.example.Portal.Entity.Role;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -14,6 +16,11 @@ public class LeaveRequest {
     private String name;
     private String typeOf;
     private String leaveId;
+    private String employeeId;   // NEW
+    private String email;        // NEW
+    private String department;   // NEW
+    private String designation;
+    private String role;
 
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate fromDate;
@@ -38,6 +45,7 @@ public class LeaveRequest {
     // Your convenience ctor (fine to keep)
     public LeaveRequest(Leave leave) {
         this.id = leave.getId();
+        this.leaveId=leave.getLeaveId();
         this.typeOf = leave.getTypeOf();
         this.fromDate = leave.getFromDate();
         this.toDate = leave.getToDate();
@@ -49,9 +57,20 @@ public class LeaveRequest {
         this.approver=leave.getApprover();
         this.remark=leave.getRemark();
         this.approvedAt=leave.getApprovedAt();
-
+        Employee emp = leave.getEmployee();
+        if (emp != null) {
+            this.name = emp.getName();
+            this.employeeId = emp.getEmployeeId();     // or String.valueOf(emp.getId())
+            this.email = emp.getEmail();
+            this.department = emp.getDepartment();
+            this.designation = emp.getDesignation();
+            this.role=emp.getRole().stream().findFirst().map(Role::getName).orElse(null);
+        } else {
+            this.name = "Unknown";
+        }
 
     }
+
 
 
 
@@ -158,4 +177,52 @@ public class LeaveRequest {
     public void setApprovedAt(LocalDateTime approvedAt) {
         this.approvedAt = approvedAt;
     }
+
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    //    public Employee getEmp() {
+//        return emp;
+//    }
+//
+//    public void setEmp(Employee emp) {
+//        this.emp = emp;
+//    }
 }

@@ -11,6 +11,8 @@ public class SequenceCounter {
     private String dateKey;
     private int counter;
 
+    public SequenceCounter(){}
+
     public SequenceCounter(String dateKey,int counter){
         this.dateKey=dateKey;
         this.counter=counter;

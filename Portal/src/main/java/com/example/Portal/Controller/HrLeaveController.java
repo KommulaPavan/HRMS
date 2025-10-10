@@ -9,33 +9,31 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class HrLeaveController {
     @Autowired
     HrLeaveService hrLeaveService;
-    @PreAuthorize("hasRole('HR')")
-    @GetMapping()
+    @PreAuthorize("hasRole('HR','ADMIN')")
+    @GetMapping("/api/hr/leaves")
     public List<LeaveRequest> getAllLeaves(){
         return hrLeaveService.getLeaveHistory();
     }
 
     @PreAuthorize("hasAnyRole('HR','ADMIN')")
-    @PostMapping("/{id}/approve")
+    @PostMapping("/api/hr/leaves/{leaveId}/approve")
 
     public ResponseEntity<LeaveRequest> approve(
-            @PathVariable("id") String leaveId,
-            @RequestBody(required = false) LeaveRequest body,
+            @PathVariable String leaveId,
+            @RequestBody(required = false) Map<String, String> body, // <— accept just remark safely
             Authentication auth
     ) {
-        // Extract approver identity (adapt this to your Security config)
-        String approverEmployeeId = auth != null ? auth.getName() : "HR";
-        String approverName = (String) (auth != null ? auth.getPrincipal() : "HR");
-        // If you store richer UserDetails, map accordingly.
+        String approverName = (auth != null) ? String.valueOf(auth.getPrincipal()) : "HR";
+        String remark = (body != null) ? body.getOrDefault("remark", null) : null;
 
-        String remark = body != null ? body.getRemark() : null;
-
-        LeaveRequest dto = hrLeaveService.getApproval(leaveId, approverEmployeeId, approverName, remark);
+        LeaveRequest dto = hrLeaveService.getApproval(leaveId, approverName, remark);
         return ResponseEntity.ok(dto);
     }
+
 }
