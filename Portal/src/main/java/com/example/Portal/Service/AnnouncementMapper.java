@@ -45,7 +45,7 @@ public final class AnnouncementMapper {
 
         AnnouncementAttachment att = a.getAttachment();
         if (att != null) {
-            AttachmentResponse ar = new AttachmentResponse();
+            AttachmentResponse ar=new AttachmentResponse();
 
             ar.setName(att.getName());
             ar.setContentType(att.getContentType());
@@ -53,7 +53,7 @@ public final class AnnouncementMapper {
             if (includeBytes) {
                 ar.setData(att.getBytes()); // <— byte[] (Base64 in JSON)
             }
-            dto.setAttachment(ar);
+           dto.setAttachment(ar);
         }
         return dto;
     }

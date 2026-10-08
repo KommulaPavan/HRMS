@@ -1,11 +1,12 @@
 package com.example.Portal.Controller;
 
+import com.example.Portal.Dto.EmployeeReviewDto;
+import com.example.Portal.Entity.Employee;
+import com.example.Portal.Service.SequenceService;
 import com.example.Portal.Dto.EmployeeRequest;
 import com.example.Portal.Dto.EmployeeResponse;
-import com.example.Portal.Dto.MailMessageDAO;
-import com.example.Portal.Entity.Employee;
 import com.example.Portal.Service.EmployeeService;
-import com.example.Portal.Service.SequenceService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -66,6 +67,14 @@ public class EmployeeController {
 
     ) {
         return employeeService.getALlEmployee();
+    }
+    @GetMapping("/api/employees/{employeeId}")
+    @PreAuthorize("hasAnyRole('ADMIN','HR')")
+    public ResponseEntity<EmployeeReviewDto> getEmployee(@PathVariable String employeeId){
+
+        EmployeeReviewDto employee = employeeService.getEmployee(employeeId);
+
+        return ResponseEntity.ok(employee);
     }
 
 

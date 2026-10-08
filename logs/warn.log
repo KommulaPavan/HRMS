@@ -1,0 +1,611 @@
+2026-10-08 11:32:23.643 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1017, SQLState: 72000
+2026-10-08 11:32:23.650 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [ORA-01017: invalid username/password; logon denied
+
+https://docs.oracle.com/error-help/db/ora-01017/] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:292)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.Portal.PortalApplication.main(PortalApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+https://docs.oracle.com/error-help/db/ora-01017/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:603)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:598)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1795)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:866)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1102)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:456)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:508)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTHWithO5Logon(T4CTTIoauthenticate.java:1676)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1421)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1368)
+	at oracle.jdbc.driver.T4CConnection.authenticateWithPassword(T4CConnection.java:1821)
+	at oracle.jdbc.driver.T4CConnection.authenticateUserForLogon(T4CConnection.java:1764)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:976)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1157)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:104)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:825)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:651)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 119 common frames omitted
+2026-10-08 11:32:23.743 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-08 11:32:39.933 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1017, SQLState: 72000
+2026-10-08 11:32:39.992 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [oracle.jdbc.diagnostics.Diagnostic.CLOCK] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+2026-10-08 11:32:39.992 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [oracle.jdbc.driver.BlockSource.ThreadedCachingBlockSource.BlockReleaser] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ oracle.jdbc.internal.Monitor$WaitableMonitor.monitorWait(Monitor.java:305)
+ oracle.jdbc.internal.Monitor$WaitableMonitor.monitorWait(Monitor.java:287)
+ oracle.jdbc.driver.BlockSource$ThreadedCachingBlockSource$BlockReleaser.run(BlockSource.java:346)
+2026-10-08 11:32:39.992 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [InterruptTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+2026-10-08 11:32:40.032 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-10-08 11:33:50.409 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1017, SQLState: 72000
+2026-10-08 11:33:50.409 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [ORA-01017: invalid username/password; logon denied
+
+https://docs.oracle.com/error-help/db/ora-01017/] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:292)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:124)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:78)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1705)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1454)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4412)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:415)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:516)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:222)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:619)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.example.Portal.PortalApplication.main(PortalApplication.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+https://docs.oracle.com/error-help/db/ora-01017/
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:702)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:603)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:598)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1795)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:866)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1102)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:456)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:508)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTHWithO5Logon(T4CTTIoauthenticate.java:1676)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1421)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1368)
+	at oracle.jdbc.driver.T4CConnection.authenticateWithPassword(T4CConnection.java:1821)
+	at oracle.jdbc.driver.T4CConnection.authenticateUserForLogon(T4CConnection.java:1764)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:976)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1157)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:104)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:825)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:651)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61)
+	... 119 common frames omitted
+2026-10-08 11:33:50.473 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-08 11:34:02.726 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 28000, SQLState: 99999
+2026-10-08 11:34:02.802 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [oracle.jdbc.diagnostics.Diagnostic.CLOCK] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+2026-10-08 11:34:02.803 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [oracle.jdbc.driver.BlockSource.ThreadedCachingBlockSource.BlockReleaser] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ oracle.jdbc.internal.Monitor$WaitableMonitor.monitorWait(Monitor.java:305)
+ oracle.jdbc.internal.Monitor$WaitableMonitor.monitorWait(Monitor.java:287)
+ oracle.jdbc.driver.BlockSource$ThreadedCachingBlockSource$BlockReleaser.run(BlockSource.java:346)
+2026-10-08 11:34:02.803 [restartedMain] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [InterruptTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/java.lang.Object.wait0(Native Method)
+ java.base/java.lang.Object.wait(Object.java:366)
+ java.base/java.util.TimerThread.mainLoop(Timer.java:563)
+ java.base/java.util.TimerThread.run(Timer.java:516)
+2026-10-08 11:34:02.813 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-10-08 11:51:53.236 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: OracleDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-08 11:52:18.430 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-08 11:52:18.460 [restartedMain] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Found 2 UserDetailsService beans, with names [loadUserService, userDetailsService]. Global Authentication Manager will not use a UserDetailsService for username/password login. Consider publishing a single UserDetailsService bean.
+2026-10-08 11:52:21.941 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:21.959 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:22.130 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:22.130 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:22.247 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:22.247 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:22.528 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:22.529 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:23.032 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:23.032 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:23.947 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:23.948 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:24.942 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:24.943 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:25.977 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:25.978 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:26.984 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:26.984 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:28.033 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:28.033 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:29.086 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:29.086 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:29.991 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:29.991 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:30.921 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:30.921 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:31.850 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:31.850 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:32.886 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:32.886 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:33.923 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:33.923 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:34.977 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:34.977 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:35.787 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:35.787 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:36.784 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:36.784 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:37.651 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:37.651 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:38.670 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:38.670 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:39.583 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:39.583 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:40.631 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:40.631 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:41.641 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:41.641 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:42.501 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:42.501 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:43.364 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:43.364 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:44.375 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:44.375 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:45.331 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:45.332 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:46.383 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:46.383 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:47.352 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:47.352 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:48.166 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:48.167 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:49.130 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:49.130 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:50.147 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:50.147 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:51.207 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:51.208 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:52.171 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:52.171 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:53.177 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:53.177 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:54.085 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:54.085 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:54.997 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:54.997 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:55.808 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:55.808 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:56.859 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:56.859 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:57.861 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:57.861 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:58.874 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:58.874 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:52:59.780 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:52:59.780 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:00.793 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:00.793 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:01.809 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:01.809 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:02.749 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:02.751 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:03.791 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:03.791 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:04.753 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:04.753 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:05.705 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:05.705 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:06.707 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:06.707 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:07.516 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:07.516 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:08.381 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:08.381 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:09.385 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:09.385 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:10.409 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:10.409 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:11.410 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:11.411 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:12.413 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:12.413 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:13.417 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:13.417 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:14.478 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:14.478 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:15.382 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:15.382 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:16.404 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:16.404 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:17.267 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:17.267 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:18.293 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:18.295 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:19.342 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:19.342 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:20.346 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:20.346 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:21.379 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:21.379 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:22.365 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:22.365 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:23.198 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:23.198 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:24.200 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:24.200 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:25.164 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:25.164 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:26.114 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:26.114 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:27.108 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:27.108 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:28.245 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:28.245 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:29.602 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:29.602 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:30.653 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:30.653 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:31.671 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:31.671 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:32.663 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:32.663 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:33.607 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:33.607 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:34.494 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:34.494 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:35.450 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:35.450 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:36.497 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:37.039 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:37.515 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:37.515 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:38.533 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:38.534 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:39.537 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:39.537 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:40.496 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:40.496 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:41.525 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:41.525 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:42.547 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:42.547 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:43.554 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:43.554 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:44.560 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:44.560 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:45.490 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:45.490 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:46.495 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:46.495 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:47.355 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:47.355 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:48.397 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:48.397 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:49.425 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:49.425 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:50.464 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:50.464 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:51.353 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:51.353 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:52.318 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:52.318 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:53.222 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:53.223 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:54.249 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:54.249 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:55.167 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:55.167 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:56.168 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:56.168 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:57.119 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:57.119 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:58.103 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:58.103 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:53:59.127 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:53:59.128 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:00.137 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:00.137 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:01.037 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:01.037 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:01.992 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:01.992 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:02.836 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:02.836 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:03.851 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:03.851 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:04.703 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:04.703 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:05.758 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:05.758 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:06.762 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:06.762 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:07.738 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:07.738 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:08.681 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:08.682 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:09.548 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:09.548 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:10.550 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:10.550 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:11.418 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:11.418 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:12.433 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:12.433 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:13.428 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:13.428 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:14.434 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:14.435 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:15.436 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:15.436 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:16.456 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:16.456 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:17.325 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:17.325 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:18.259 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:18.260 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2026-10-08 11:54:19.269 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2026-10-08 11:54:19.269 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] WARN  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected

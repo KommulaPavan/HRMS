@@ -1,5 +1,6 @@
 package com.example.Portal.Repository;
 
+
 import com.example.Portal.Entity.Employee;
 import com.example.Portal.Entity.Leave;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -2,7 +2,6 @@ package com.example.Portal.Dto;
 
 import com.example.Portal.Entity.Outbox;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 public class OutboxDTO {

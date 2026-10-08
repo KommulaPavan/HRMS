@@ -1,5 +1,6 @@
 package com.example.Portal.Repository;
 
+
 import com.example.Portal.Entity.Training;
 import org.springframework.data.jpa.repository.JpaRepository;
 

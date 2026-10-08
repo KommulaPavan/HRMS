@@ -2,6 +2,8 @@ package com.example.Portal.Dto;
 
 import com.example.Portal.Entity.Employee;
 
+import java.math.BigDecimal;
+
 public class EmployeeResponse {
     private Long id;
     private String name;
@@ -11,6 +13,8 @@ public class EmployeeResponse {
     private String designation;
     private String employeeId;
     private String accountStatus;
+    private BigDecimal baseSalary;
+
 
     public EmployeeResponse() {}
 
@@ -33,10 +37,14 @@ public class EmployeeResponse {
         r.setAccountStatus(
                 e.getAccountStatus() != null ? e.getAccountStatus() : "PENDING"
         );
+
+        r.setBaseSalary(e.getBaseSalary());
         return r;
     }
 
+
     // --- getters/setters ---
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -60,4 +68,13 @@ public class EmployeeResponse {
 
     public String getAccountStatus() { return accountStatus; }
     public void setAccountStatus(String accountStatus) { this.accountStatus = accountStatus; }
+
+    public BigDecimal getBaseSalary() {
+        return baseSalary;
+    }
+
+    public void setBaseSalary(BigDecimal baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+
 }

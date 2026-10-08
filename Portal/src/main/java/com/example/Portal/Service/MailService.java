@@ -1,6 +1,8 @@
 package com.example.Portal.Service;
 
+
 import com.example.Portal.Dto.MailMessageDAO;
+import com.example.Portal.Dto.PayrollEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -41,6 +43,14 @@ public class MailService {
         javaMailSender.send(mailMessage);
         return "Mail is sent";
     }
+
+   public void sendLinkPayroll(String to,String subject,String body){
+       SimpleMailMessage mailMessage = new SimpleMailMessage();
+       mailMessage.setTo(to);
+       mailMessage.setSubject(subject);
+       mailMessage.setText(body);
+       javaMailSender.send(mailMessage);
+   }
 }
 
 

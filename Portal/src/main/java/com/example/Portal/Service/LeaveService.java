@@ -1,5 +1,6 @@
 package com.example.Portal.Service;
 
+
 import com.example.Portal.Dto.LeaveRequest;
 import com.example.Portal.Entity.Employee;
 import com.example.Portal.Entity.Leave;
@@ -8,7 +9,6 @@ import com.example.Portal.Repository.LeaveRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,7 +21,7 @@ public class LeaveService {
     EmployeeRepository employeeRepository;
 
 
-    public Leave applyLeave(LeaveRequest leaveRequest,Employee emp){
+    public Leave applyLeave(LeaveRequest leaveRequest, Employee emp){
         Leave leave=new Leave();
         leave.setName(emp.getName());
         leave.setTypeOf(leaveRequest.getTypeOf());

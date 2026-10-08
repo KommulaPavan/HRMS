@@ -2,7 +2,6 @@ package com.example.Portal.Entity;
 
 import jakarta.persistence.*;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 
 @Entity

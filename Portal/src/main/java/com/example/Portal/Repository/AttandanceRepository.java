@@ -1,8 +1,7 @@
 package com.example.Portal.Repository;
 
-import com.example.Portal.Dto.AttandanceRequest;
+
 import com.example.Portal.Entity.Attandance;
-import com.example.Portal.Entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -25,14 +24,23 @@ public interface AttandanceRepository extends JpaRepository<Attandance, Long> {
     List<Attandance> findTodayOrdered(@Param("employeeId") String employeeId,
                                       @Param("today") LocalDate today);
 
-    default Optional<Attandance> findTodayBest(String employeeId, LocalDate today) {
+    default Optional<Attandance> findTodayBest(@Param("employeeId")String employeeId, @Param("today") LocalDate today) {
         List<Attandance> list = findTodayOrdered(employeeId, today);
         return list.isEmpty() ? Optional.empty() : Optional.of(list.get(0));
     }
-
-
+    @Query("""
+        select a from Attandance a
+        where a.employee.employeeId = :employeeId
+        and a.todayDate between :startDate and :endDate
+        order by a.todayDate desc
+        """)
     List<Attandance> findByEmployeeEmployeeIdAndTodayDateBetweenOrderByTodayDateDesc(
-            String employeeId,
+            @Param("employeeId") String employeeId,
+            @Param("startDate") LocalDate startDate,
+            @Param("endDate") LocalDate endDate
+    );
+
+    List<Attandance> findByTodayDateBetween(
             LocalDate startDate,
             LocalDate endDate
     );

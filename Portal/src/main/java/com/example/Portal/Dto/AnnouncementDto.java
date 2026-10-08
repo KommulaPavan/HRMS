@@ -1,7 +1,5 @@
 package com.example.Portal.Dto;
 
-import com.example.Portal.Entity.Announcement;
-
 import java.time.Instant;
 import java.util.List;
 

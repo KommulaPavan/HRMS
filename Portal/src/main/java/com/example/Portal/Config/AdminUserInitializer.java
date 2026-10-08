@@ -4,6 +4,7 @@ import com.example.Portal.Entity.Employee;
 import com.example.Portal.Entity.Role;
 import com.example.Portal.Repository.EmployeeRepository;
 import com.example.Portal.Repository.RoleRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +14,9 @@ import java.util.Set;
 
 @Configuration
 public class AdminUserInitializer {
+
+    @Autowired
+    RoleRepository roleRepository;
 
     @Bean
     public CommandLineRunner createUserRole(EmployeeRepository employeeRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder){

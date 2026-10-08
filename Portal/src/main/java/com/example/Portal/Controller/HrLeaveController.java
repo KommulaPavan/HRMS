@@ -1,5 +1,6 @@
 package com.example.Portal.Controller;
 
+
 import com.example.Portal.Dto.LeaveRequest;
 import com.example.Portal.Service.HrLeaveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class HrLeaveController {
 
     public ResponseEntity<LeaveRequest> approve(
             @PathVariable String leaveId,
-            @RequestBody(required = false) Map<String, String> body, // <— accept just remark safely
+            @RequestBody(required = false) Map<String, String> body,
             Authentication auth
     ) {
         String approverName = (auth != null) ? String.valueOf(auth.getPrincipal()) : "HR";

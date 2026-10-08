@@ -1,0 +1,330 @@
+2026-10-08 11:31:22.982 [restartedMain] INFO  c.example.Portal.PortalApplication - Starting PortalApplication using Java 21.0.9 with PID 6116 (G:\MyPortal\Portal\target\classes started by PAWAN in G:\MyPortal)
+2026-10-08 11:31:22.988 [restartedMain] INFO  c.example.Portal.PortalApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-08 11:31:23.163 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\PAWAN\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.3.0.23.09\ojdbc11-23.3.0.23.09.jar referenced one or more files that do not exist: file:/C:/Users/PAWAN/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.3.0.23.09/oraclepki.jar
+2026-10-08 11:31:23.163 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-08 11:31:23.165 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-08 11:31:31.954 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-08 11:31:32.285 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 301 ms. Found 15 JPA repository interfaces.
+2026-10-08 11:31:34.520 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b4bf4ef4-577a-3e49-8069-a25e8a1ad954
+2026-10-08 11:31:38.737 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-08 11:31:38.768 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-08 11:31:38.776 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-08 11:31:38.776 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-10-08 11:31:39.048 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-10-08 11:31:39.050 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 15883 ms
+2026-10-08 11:31:40.195 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-08 11:31:40.672 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-10-08 11:31:40.784 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-10-08 11:31:42.686 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-08 11:31:43.018 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:32:26.230 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:32:28.882 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:32:31.054 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:32:33.216 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:32:35.380 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:32:37.783 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-08 11:32:37.831 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:32:39.989 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-08 11:32:40.049 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-08 11:33:25.593 [restartedMain] INFO  c.example.Portal.PortalApplication - Starting PortalApplication using Java 21.0.9 with PID 3728 (G:\MyPortal\Portal\target\classes started by PAWAN in G:\MyPortal)
+2026-10-08 11:33:25.599 [restartedMain] INFO  c.example.Portal.PortalApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-08 11:33:25.717 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\PAWAN\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.3.0.23.09\ojdbc11-23.3.0.23.09.jar referenced one or more files that do not exist: file:/C:/Users/PAWAN/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.3.0.23.09/oraclepki.jar
+2026-10-08 11:33:25.717 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-08 11:33:25.717 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-08 11:33:38.585 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-08 11:33:39.141 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 530 ms. Found 15 JPA repository interfaces.
+2026-10-08 11:33:40.480 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b4bf4ef4-577a-3e49-8069-a25e8a1ad954
+2026-10-08 11:33:43.980 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-08 11:33:44.009 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-08 11:33:44.018 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-08 11:33:44.020 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-10-08 11:33:44.154 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-10-08 11:33:44.154 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 18435 ms
+2026-10-08 11:33:45.128 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-08 11:33:45.374 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-10-08 11:33:45.484 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-10-08 11:33:46.506 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-08 11:33:46.638 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:33:53.384 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:33:55.598 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:33:57.705 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:33:58.819 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:33:59.980 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:34:01.607 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-08 11:34:01.655 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:34:02.798 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-08 11:34:02.829 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-08 11:51:42.524 [restartedMain] INFO  c.example.Portal.PortalApplication - Starting PortalApplication using Java 21.0.9 with PID 16088 (G:\MyPortal\Portal\target\classes started by PAWAN in G:\MyPortal)
+2026-10-08 11:51:42.528 [restartedMain] INFO  c.example.Portal.PortalApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-08 11:51:42.631 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\PAWAN\.m2\repository\com\oracle\database\jdbc\ojdbc11\23.3.0.23.09\ojdbc11-23.3.0.23.09.jar referenced one or more files that do not exist: file:/C:/Users/PAWAN/.m2/repository/com/oracle/database/jdbc/ojdbc11/23.3.0.23.09/oraclepki.jar
+2026-10-08 11:51:42.631 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-08 11:51:42.631 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-08 11:51:46.960 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-08 11:51:47.152 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 177 ms. Found 15 JPA repository interfaces.
+2026-10-08 11:51:47.730 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=b4bf4ef4-577a-3e49-8069-a25e8a1ad954
+2026-10-08 11:51:49.127 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-08 11:51:49.159 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-10-08 11:51:49.161 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-08 11:51:49.161 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-10-08 11:51:49.254 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-10-08 11:51:49.254 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6621 ms
+2026-10-08 11:51:49.979 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-08 11:51:50.191 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-10-08 11:51:50.292 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-10-08 11:51:51.037 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-08 11:51:51.123 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2026-10-08 11:51:52.249 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariCP - Added connection oracle.jdbc.driver.T4CConnection@319702e7
+2026-10-08 11:51:52.252 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2026-10-08 11:51:59.112 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-08 11:52:07.757 [restartedMain] INFO  o.h.t.s.e.i.AbstractInformationExtractorImpl - HHH000475: Cannot locate column information using identifier [SYS_NC00010$]; ignoring index [IDX_ANN_PUBLISH_AT]
+2026-10-08 11:52:15.518 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-08 11:52:16.446 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-08 11:52:20.006 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-10-08 11:52:20.250 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-10-08 11:52:20.289 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-10-08 11:52:20.572 [restartedMain] INFO  o.a.k.c.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification-id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification-id
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-10-08 11:52:20.709 [restartedMain] INFO  o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2026-10-08 11:52:21.041 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.1
+2026-10-08 11:52:21.041 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: e2494e6ffb89f828
+2026-10-08 11:52:21.041 [restartedMain] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1791440541039
+2026-10-08 11:52:21.047 [restartedMain] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Subscribed to topic(s): payroll-topic
+2026-10-08 11:52:21.077 [restartedMain] INFO  c.example.Portal.PortalApplication - Started PortalApplication in 40.482 seconds (process running for 42.656)
+2026-10-08 11:52:21.932 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:22.129 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:22.246 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:22.527 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:23.031 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:23.947 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:24.942 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:25.977 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:26.984 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:28.032 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:29.086 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:29.990 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:30.921 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:31.850 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:32.886 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:33.923 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:34.976 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:35.786 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:36.784 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:37.651 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:38.670 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:39.582 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:40.631 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:41.641 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:42.501 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:43.364 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:44.375 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:45.331 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:46.382 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:47.352 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:48.166 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:49.129 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:50.147 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:51.207 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:52.171 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:53.177 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:54.084 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:54.997 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:55.808 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:56.858 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:57.860 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:58.873 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:52:59.780 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:00.793 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:01.809 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:02.749 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:03.791 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:04.753 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:05.705 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:06.706 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:07.516 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:08.381 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:09.385 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:10.409 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:11.410 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:12.413 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:13.417 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:14.478 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:15.382 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:16.404 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:17.267 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:18.289 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:19.342 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:20.345 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:21.379 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:22.364 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:23.198 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:24.200 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:25.164 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:26.114 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:27.108 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:28.107 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:29.601 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:30.653 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:31.671 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:32.663 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:33.607 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:34.494 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:35.450 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:36.496 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:37.515 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:38.533 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:39.537 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:40.496 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:41.525 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:42.547 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:43.554 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:44.560 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:45.489 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:46.495 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:47.355 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:48.397 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:49.425 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:50.464 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:51.353 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:52.318 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:53.222 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:54.249 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:55.167 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:56.168 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:57.119 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:58.103 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:53:59.127 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:00.137 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:01.037 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:01.992 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:02.836 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:03.850 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:04.703 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:05.756 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:06.762 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:07.738 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:08.681 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:09.548 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:10.550 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:11.418 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:12.428 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:13.428 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:14.434 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:15.436 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:16.456 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:17.325 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:18.255 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:19.269 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.apache.kafka.clients.NetworkClient - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Node -1 disconnected.
+2026-10-08 11:54:19.578 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-08 11:54:19.578 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Request joining group due to: consumer pro-actively leaving the group
+2026-10-08 11:54:19.578 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.LegacyKafkaConsumer - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Unsubscribed all topics or patterns and assigned partitions
+2026-10-08 11:54:19.580 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Resetting generation and member id due to: consumer pro-actively leaving the group
+2026-10-08 11:54:19.580 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.k.c.c.i.ConsumerCoordinator - [Consumer clientId=consumer-notification-id-1, groupId=notification-id] Request joining group due to: consumer pro-actively leaving the group
+2026-10-08 11:54:19.588 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2026-10-08 11:54:19.589 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-10-08 11:54:19.589 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2026-10-08 11:54:19.589 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2026-10-08 11:54:19.605 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-notification-id-1 unregistered
+2026-10-08 11:54:19.606 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  o.s.k.l.KafkaMessageListenerContainer - notification-id: Consumer stopped
+2026-10-08 11:54:19.684 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-08 11:54:19.760 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown initiated...
+2026-10-08 11:54:20.049 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Shutdown completed.

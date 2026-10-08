@@ -54,7 +54,7 @@ public class Training {
     void onUpdate() { updatedAt = OffsetDateTime.now(); }
 
     @OneToMany(mappedBy = "training", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<TrainingEnrollment> enrollments = new LinkedHashSet<>();
+    private Set<com.example.Portal.Entity.TrainingEnrollment> enrollments = new LinkedHashSet<>();
 
     // --- getters/setters ---
     public Long getId() { return id; }
@@ -94,11 +94,11 @@ public class Training {
         this.updatedAt = updatedAt;
     }
 
-    public Set<TrainingEnrollment> getEnrollments() {
+    public Set<com.example.Portal.Entity.TrainingEnrollment> getEnrollments() {
         return enrollments;
     }
 
-    public void setEnrollments(Set<TrainingEnrollment> enrollments) {
+    public void setEnrollments(Set<com.example.Portal.Entity.TrainingEnrollment> enrollments) {
         this.enrollments = enrollments;
     }
 }

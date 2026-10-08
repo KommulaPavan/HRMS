@@ -14,7 +14,7 @@ public class AnnouncementResponse {
     private String createdBy;
     private String creatorRole;
     private String status;         // LIVE | SCHEDULED | EXPIRED
-    private AttachmentResponse attachment;
+    private com.example.Portal.Dto.AttachmentResponse attachment;
 
     // --- getters & setters ---
     public Long getId() { return id; }
@@ -50,6 +50,6 @@ public class AnnouncementResponse {
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
 
-    public AttachmentResponse getAttachment() { return attachment; }
-    public void setAttachment(AttachmentResponse attachment) { this.attachment = attachment; }
+    public com.example.Portal.Dto.AttachmentResponse getAttachment() { return attachment; }
+    public void setAttachment(com.example.Portal.Dto.AttachmentResponse attachment) { this.attachment = attachment; }
 }

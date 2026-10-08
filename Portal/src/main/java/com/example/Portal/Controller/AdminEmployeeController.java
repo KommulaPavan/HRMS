@@ -1,7 +1,7 @@
 package com.example.Portal.Controller;
 
+
 import com.example.Portal.Dto.EmployeeResponse;
-import com.example.Portal.Entity.Employee;
 import com.example.Portal.Service.ManageUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

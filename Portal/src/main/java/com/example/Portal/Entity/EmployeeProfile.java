@@ -15,9 +15,13 @@ public class EmployeeProfile {
     private String department;
     private Long phone;
     private String location;
+    @Lob
+    @Column(name = "ABOUT")              // optional: specify column name
     private String about;
 
-     private String avatarUrl;
+    @Lob
+    @Column(name = "AVATAR_URL")         // if you absolutely want to store long urls/data
+    private String avatarUrl;
     private String role;
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "employee_fk", referencedColumnName = "id")

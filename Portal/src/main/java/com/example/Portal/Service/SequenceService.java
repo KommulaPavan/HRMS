@@ -1,8 +1,9 @@
 // com/example/Portal/Service/SequenceService.java
 package com.example.Portal.Service;
 
-import com.example.Portal.Entity.SequenceCounter;
 import com.example.Portal.Repository.SequenceCounterRepository;
+import com.example.Portal.Entity.SequenceCounter;
+
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

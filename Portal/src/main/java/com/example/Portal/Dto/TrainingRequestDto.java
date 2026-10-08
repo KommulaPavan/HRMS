@@ -1,9 +1,9 @@
 package com.example.Portal.Dto;
 
+
+
 import com.example.Portal.Entity.Training;
 import com.fasterxml.jackson.annotation.JsonProperty;
-//import jakarta.validation.constraints.Min;
-//import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDate;
 

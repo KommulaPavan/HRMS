@@ -1,4 +1,6 @@
 package com.example.Portal.Entity;
 
-public class JobStatus {
+public enum JobStatus {
+    OPEN,
+    CLOSE;
 }

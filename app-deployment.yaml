@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hcm-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hcm-app
+  template:
+    metadata:
+      labels:
+        app: hcm-app
+    spec:
+      containers:
+        - name: hcm-app
+          image: hcm-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:oracle:thin:@oracle-db:1521/XEPDB1
+            - name: SPRING_DATASOURCE_USERNAME
+              value: c##pavan
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: pavan

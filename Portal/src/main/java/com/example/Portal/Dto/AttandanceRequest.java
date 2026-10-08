@@ -13,20 +13,27 @@ public class AttandanceRequest {
     private LocalDateTime checkInAt;
     private LocalDateTime checkOutAt;
     private int workMinutes;
-    private String employeeId;
+    private String employeeId;   // keep this
     private String source;
+
     public AttandanceRequest() {
     }
 
     public AttandanceRequest(Attandance a){
-        this.notes=a.getNotes();
-        this.todayDate=a.getTodayDate();
-        this.attandancestatus=a.getAttandancestatus();
-        this.checkInAt=a.getCheckInAt();
-        this.checkOutAt=a.getCheckOutAt();
-        this.workMinutes=a.getWorkMinutes();
-        this.source=a.getSource();
+        this.notes = a.getNotes();
+        this.todayDate = a.getTodayDate();
+        this.attandancestatus = a.getAttandancestatus();
+        this.checkInAt = a.getCheckInAt();
+        this.checkOutAt = a.getCheckOutAt();
+        this.workMinutes = a.getWorkMinutes();
+        this.source = a.getSource();
+
+        // IMPORTANT: map from relation
+        if (a.getEmployee() != null) {
+            this.employeeId = a.getEmployee().getEmployeeId();
+        }
     }
+
     public String getNotes() {
         return notes;
     }
@@ -91,5 +98,3 @@ public class AttandanceRequest {
         this.source = source;
     }
 }
-
-

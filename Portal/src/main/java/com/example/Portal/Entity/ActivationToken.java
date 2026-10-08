@@ -25,7 +25,7 @@ public class ActivationToken {
             columnDefinition = "NUMBER(19,0)" // ✅ enforce Oracle compatibility
     )
     @JsonBackReference
-    private Employee employee;
+    private com.example.Portal.Entity.Employee employee;
 
     private LocalDateTime createdAt;
     private LocalDateTime expiresAt;
@@ -48,11 +48,11 @@ public class ActivationToken {
         this.token = token;
     }
 
-    public Employee getEmployee() {
+    public com.example.Portal.Entity.Employee getEmployee() {
         return employee;
     }
 
-    public void setEmployee(Employee employee) {
+    public void setEmployee(com.example.Portal.Entity.Employee employee) {
         this.employee = employee;
     }
 

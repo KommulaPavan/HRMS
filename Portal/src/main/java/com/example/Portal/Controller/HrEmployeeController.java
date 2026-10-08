@@ -1,6 +1,6 @@
 package com.example.Portal.Controller;
 
-import com.example.Portal.Dto.EmployeeRequest;
+
 import com.example.Portal.Dto.HrEmployeeRequest;
 import com.example.Portal.Service.HrEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;

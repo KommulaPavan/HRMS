@@ -1,7 +1,10 @@
 package com.example.Portal.Service;
 
+
+
 import com.example.Portal.Dto.EmployeeRequest;
 import com.example.Portal.Dto.EmployeeResponse;
+import com.example.Portal.Dto.EmployeeReviewDto;
 import com.example.Portal.Dto.MailMessageDAO;
 import com.example.Portal.Entity.ActivationToken;
 import com.example.Portal.Entity.Employee;
@@ -12,10 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.List;
-import java.util.Locale;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.antlr.v4.runtime.tree.xpath.XPath.findAll;
@@ -28,9 +28,9 @@ public class EmployeeService {
     @Autowired
     RoleRepository roleRepository;
     @Autowired
-    MailService mailService;
+    com.example.Portal.Service.MailService mailService;
     @Autowired
-    TokenActivation tokenActivation;
+    com.example.Portal.Service.TokenActivation tokenActivation;
     @Autowired
     SequenceService sequenceService;
 
@@ -119,6 +119,18 @@ public class EmployeeService {
         return employeeRepository.findAll().stream().map(EmployeeResponse::fromEntity).collect(Collectors.toList());
     }
 
+    public EmployeeReviewDto getEmployee(String employeeId){
 
+        Employee employee = employeeRepository
+                .findByEmployeeId(employeeId)
+                .orElseThrow(() -> new RuntimeException("Employee not found"));
+
+        EmployeeReviewDto dto = new EmployeeReviewDto();
+        dto.setEmployeeId(employee.getEmployeeId());
+        dto.setName(employee.getName());
+        dto.setDepartment(employee.getDepartment());
+
+        return dto;
+    }
 
 }

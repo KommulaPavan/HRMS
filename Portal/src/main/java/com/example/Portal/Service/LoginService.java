@@ -1,9 +1,12 @@
 package com.example.Portal.Service;
 
-import com.example.Portal.Dto.EmployeeRequest;
+
+import com.example.Portal.Dto.LoginRequest;
 import com.example.Portal.Entity.Employee;
 import com.example.Portal.Repository.EmployeeRepository;
 import com.example.Portal.Utils.JwtUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -11,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
+
 public class LoginService {
 
     @Autowired
@@ -21,6 +25,8 @@ public class LoginService {
 
     @Autowired
     JwtUtils jwtUtils; // Make sure you have a JWT utility
+
+    Logger loggers= LoggerFactory.getLogger(LoginService.class);
 
     /*public String loginEmployee(EmployeeRequest employeeRequest){
         Optional<Employee> optionalEmployee = employeeRepository.findByEmail(employeeRequest.getEmail());
@@ -42,10 +48,11 @@ public class LoginService {
         return jwtUtils.createToken(employee);
     }*/
 
-    public String loginEmployee(EmployeeRequest employeeRequest){
+    public String loginEmployee(LoginRequest employeeRequest){
        Optional<Employee> optionalEmployee=employeeRepository.findByEmployeeId(employeeRequest.getEmployeeId());
        if(optionalEmployee.isEmpty()){
            throw new RuntimeException("EmployeeId not found");
+
        }
                Employee employee=optionalEmployee.get();
         if (!"Active".equalsIgnoreCase(employee.getAccountStatus())) {
@@ -55,6 +62,8 @@ public class LoginService {
         if (!passwordEncoder.matches(employeeRequest.getPassword(), employee.getPassword())) {
             throw new RuntimeException("Invalid password");
         }
+
+        loggers.info("Login success");
 
 
         return jwtUtils.createToken(employee);

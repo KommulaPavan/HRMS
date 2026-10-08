@@ -99,11 +99,12 @@ public class AttadanceController {
 
 package com.example.Portal.Controller;
 
+
+import com.example.Portal.Dto.AttadanceRecord;
 import com.example.Portal.Dto.AttandanceRequest;
 import com.example.Portal.Entity.Employee;
 import com.example.Portal.Repository.EmployeeRepository;
 import com.example.Portal.Service.AttandanceService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -112,8 +113,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/attendance")
@@ -222,5 +223,27 @@ public class AttadanceController {
     ) {
         return ResponseEntity.ok(attandanceService.getMonths(employeeId, year, month));
     }
+
+    @PreAuthorize("isAuthenticated()")
+    @GetMapping("/me/range")
+    public ResponseEntity<List<AttandanceRequest>> getBetween(
+            @RequestParam LocalDate from,
+            @RequestParam LocalDate to,
+            Authentication auth
+    ) {
+        return ResponseEntity.ok(
+                attandanceService.getBetweenDates(auth.getName(), from, to)
+        );
+    }
+    @PreAuthorize("isAuthenticated()")
+    @GetMapping("me/rangee")
+    public List<AttadanceRecord> getForPayroll(
+            @RequestParam LocalDate from,
+            @RequestParam LocalDate to
+    ) {
+        return attandanceService.getAttendanceForPayroll(from, to);
+    }
+
+
 }
 

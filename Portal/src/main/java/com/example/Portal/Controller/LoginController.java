@@ -1,17 +1,15 @@
 package com.example.Portal.Controller;
 
-import com.example.Portal.Dto.EmployeeRequest;
+
+import com.example.Portal.Dto.LoginRequest;
 import com.example.Portal.Entity.Employee;
-import com.example.Portal.Entity.Role;
 import com.example.Portal.Repository.EmployeeRepository;
 import com.example.Portal.Service.LoginService;
 import com.example.Portal.Utils.JwtUtils;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -30,7 +28,7 @@ public class LoginController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<TokenResponse> userLogin(@RequestBody EmployeeRequest employeeRequest) {
+    public ResponseEntity<TokenResponse> userLogin(@RequestBody LoginRequest employeeRequest) {
         String token = loginService.loginEmployee(employeeRequest);
         return ResponseEntity.ok(new TokenResponse("Bearer", token));
     }

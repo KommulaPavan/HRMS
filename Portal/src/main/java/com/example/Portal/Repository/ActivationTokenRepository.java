@@ -1,5 +1,6 @@
 package com.example.Portal.Repository;
 
+
 import com.example.Portal.Entity.ActivationToken;
 import com.example.Portal.Entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,7 @@
 package com.example.Portal.Entity;
 
-public class Statu {
+public enum AttandanceStatus {
+
+    PRESENT,
+    LEAVE;
 }

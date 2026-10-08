@@ -209,13 +209,13 @@ public class TrainingController {
 //}
 package com.example.Portal.Controller;
 
+
 import com.example.Portal.Dto.EnrollRequest;
 import com.example.Portal.Dto.EnrollResponse;
 import com.example.Portal.Dto.RosterItemDto;
 import com.example.Portal.Dto.TrainingRequestDto;
 import com.example.Portal.Service.TrainingEnrollmentService;
 import com.example.Portal.Service.TrainingService;
-//import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
@@ -250,7 +250,7 @@ public class TrainingController {
 
     @PreAuthorize("hasAnyRole('HR','ADMIN')")
     @PostMapping("/hr/trainings")
-    public ResponseEntity<TrainingRequestDto> addTrainingHr( @RequestBody TrainingRequestDto dto) {
+    public ResponseEntity<TrainingRequestDto> addTrainingHr(@RequestBody TrainingRequestDto dto) {
         TrainingRequestDto saved = trainingService.assignTraining(dto);
         return ResponseEntity
                 .created(URI.create("/api/hr/trainings/" + saved.getTrainingId()))

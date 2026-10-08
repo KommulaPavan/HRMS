@@ -3,7 +3,6 @@ package com.example.Portal.Entity;
 import jakarta.persistence.*;
 import java.time.Instant;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -56,9 +55,9 @@ public class Announcement {
 
     // 1:1 attachment (shared PK)
     @OneToOne(mappedBy = "announcement", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
-    private AnnouncementAttachment attachment;
+    private com.example.Portal.Entity.AnnouncementAttachment attachment;
 
-    public void setAttachment(AnnouncementAttachment att) {
+    public void setAttachment(com.example.Portal.Entity.AnnouncementAttachment att) {
         this.attachment = att;
         if (att != null) att.setAnnouncement(this);
     }
@@ -143,7 +142,7 @@ public class Announcement {
         this.creatorRole = creatorRole;
     }
 
-    public AnnouncementAttachment getAttachment() {
+    public com.example.Portal.Entity.AnnouncementAttachment getAttachment() {
         return attachment;
     }
 }

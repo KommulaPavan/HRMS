@@ -1,4 +1,8 @@
 package com.example.Portal.Entity;
 
-public class PayrollStatus {
+public enum PayrollStatus {
+
+    GENERATED,
+    PAID
+
 }

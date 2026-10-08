@@ -1,24 +1,21 @@
 package com.example.Portal.Controller;
 
+
 import com.example.Portal.Dto.LeaveRequest;
 import com.example.Portal.Entity.Employee;
 import com.example.Portal.Entity.Leave;
 import com.example.Portal.Repository.EmployeeRepository;
-import com.example.Portal.Service.EmployeeService;
 import com.example.Portal.Service.LeaveService;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.security.core.Authentication;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -31,7 +28,7 @@ public class LeaveController {
 
     @PreAuthorize("hasRole('EMPLOYEE')")
     @PostMapping("/api/leaves")
-    public ResponseEntity<?> applyLeave(@RequestBody LeaveRequest leaveRequest, Authentication authentication,String employeeId) {
+    public ResponseEntity<?> applyLeave(@RequestBody LeaveRequest leaveRequest, Authentication authentication, String employeeId) {
 
         final String principal = authentication.getName(); // could be employeeId or email
 

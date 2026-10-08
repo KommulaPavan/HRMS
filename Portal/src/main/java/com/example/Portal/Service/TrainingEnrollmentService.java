@@ -1,5 +1,6 @@
 package com.example.Portal.Service;
 
+
 import com.example.Portal.Dto.EnrollResponse;
 import com.example.Portal.Dto.RosterItemDto;
 import com.example.Portal.Entity.Employee;
@@ -69,7 +70,7 @@ public class TrainingEnrollmentService {
                 : employeeRepository.findAllById(targetIds);
 
         final Map<Long, Employee> empById = foundEmployees.stream()
-                .collect(Collectors.toMap(Employee::getId, e -> e, (a,b)->a, LinkedHashMap::new));
+                .collect(Collectors.toMap(Employee::getId, e -> e, (a, b)->a, LinkedHashMap::new));
 
         final Set<Long> foundIds = new LinkedHashSet<>(empById.keySet());
 

@@ -1,13 +1,14 @@
 package com.example.Portal.Service;
 
+
 import com.example.Portal.Dto.AnnouncementDto;
 import com.example.Portal.Dto.AnnouncementResponse;
 import com.example.Portal.Entity.Announcement;
 import com.example.Portal.Entity.AnnouncementAttachment;
 import com.example.Portal.Entity.Priority;
 import com.example.Portal.Repository.AnnouncementRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -15,7 +16,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 import static com.example.Portal.Service.AnnouncementMapper.toResponse;
 

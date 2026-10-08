@@ -2,9 +2,6 @@ package com.example.Portal.Entity;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Set;
-
 @Entity
 @Table(name = "role_portal")
 public class Role {

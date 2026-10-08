@@ -23,7 +23,7 @@ public class TrainingEnrollment {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private TrainingStatus status = TrainingStatus.ENROLLED;
+    private com.example.Portal.Entity.TrainingStatus status = com.example.Portal.Entity.TrainingStatus.ENROLLED;
 
     /** 0..100 */
     private Integer progress = 0;
@@ -40,22 +40,56 @@ public class TrainingEnrollment {
     @PreUpdate
     void onUpdate() { updatedAt = OffsetDateTime.now(); }
 
-    // --- getters/setters ---
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
-    public Training getTraining() { return training; }
-    public void setTraining(Training training) { this.training = training; }
-    public Employee getEmployee() { return employee; }
-    public void setEmployee(Employee employee) { this.employee = employee; }
-    public TrainingStatus getStatus() { return status; }
-    public void setStatus(TrainingStatus status) { this.status = status; }
-    public Integer getProgress() { return progress; }
-    public void setProgress(Integer progress) { this.progress = progress; }
-    public OffsetDateTime getCreatedAt() { return createdAt; }
-    public OffsetDateTime getUpdatedAt() { return updatedAt; }
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Training getTraining() {
+        return training;
+    }
+
+    public void setTraining(Training training) {
+        this.training = training;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public TrainingStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TrainingStatus status) {
+        this.status = status;
+    }
+
+    public Integer getProgress() {
+        return progress;
+    }
+
+    public void setProgress(Integer progress) {
+        this.progress = progress;
+    }
+
+    public OffsetDateTime getCreatedAt() {
+        return createdAt;
+    }
 
     public void setCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public OffsetDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
     public void setUpdatedAt(OffsetDateTime updatedAt) {

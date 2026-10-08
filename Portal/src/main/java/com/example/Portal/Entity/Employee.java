@@ -6,6 +6,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.math.BigDecimal;
+import java.security.PrivateKey;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -36,6 +38,9 @@ public class Employee implements UserDetails {
     @Column(name="employee_id", nullable=false, unique=true, length=20)
     private String employeeId;
 
+    private BigDecimal baseSalary;
+
+
     @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference
     private ActivationToken activationToken;
@@ -44,28 +49,36 @@ public class Employee implements UserDetails {
     private String accountStatus;
 
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Leave> leave=new ArrayList<>();
+    private List<com.example.Portal.Entity.Leave> leave=new ArrayList<>();
 
     @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Attandance> attandance=new ArrayList<>();
 
     @OneToMany(mappedBy = "employee", cascade=CascadeType.ALL,fetch=FetchType.LAZY )
-    List<Outbox> outbox=new ArrayList<>();
+    List<com.example.Portal.Entity.Outbox> outbox=new ArrayList<>();
 
     @OneToOne(mappedBy = "employee", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = true)
-    private EmployeeProfile profile;
+    private com.example.Portal.Entity.EmployeeProfile profile;
 
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<TrainingEnrollment> enrollments = new LinkedHashSet<>();
-    public void setHelper(EmployeeProfile profile){
+    private Set<com.example.Portal.Entity.TrainingEnrollment> enrollments = new LinkedHashSet<>();
+    public void setHelper(com.example.Portal.Entity.EmployeeProfile profile){
         this.profile=profile;
         if(profile!=null){
             profile.setEmployee(this);
         }
     }
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL, orphanRemoval = true )
+     List<com.example.Portal.Entity.JobOpening> jobOpenings=new ArrayList<>();
+
 //    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 //    List<UploadDocument> uploadDocument=new ArrayList<>();
 //     Getters & Setters
+    @OneToOne(mappedBy = "employee" , cascade = CascadeType.ALL,orphanRemoval = true)
+    private com.example.Portal.Entity.Payroll payroll;
+
+    @OneToMany(mappedBy = "employee",cascade = CascadeType.ALL,orphanRemoval = true)
+    List<Reviews> reviews=new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -163,6 +176,10 @@ public class Employee implements UserDetails {
         return outbox;
     }
 
+    public void setOutbox(List<Outbox> outbox) {
+        this.outbox = outbox;
+    }
+
     public EmployeeProfile getProfile() {
         return profile;
     }
@@ -171,16 +188,24 @@ public class Employee implements UserDetails {
         this.profile = profile;
     }
 
-    public void setOutbox(List<Outbox> outbox) {
-        this.outbox = outbox;
-    }
-
     public Set<TrainingEnrollment> getEnrollments() {
         return enrollments;
     }
 
     public void setEnrollments(Set<TrainingEnrollment> enrollments) {
         this.enrollments = enrollments;
+    }
+
+    public List<JobOpening> getJobOpenings() {
+        return jobOpenings;
+    }
+
+    public void setJobOpenings(List<JobOpening> jobOpenings) {
+        this.jobOpenings = jobOpenings;
+    }
+
+    public void setPayroll(Payroll payroll) {
+        this.payroll = payroll;
     }
 
     @Override
@@ -218,4 +243,18 @@ public class Employee implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    public BigDecimal getBaseSalary() {
+        return baseSalary;
+    }
+
+    public void setBaseSalary(BigDecimal baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+
+    public com.example.Portal.Entity.Payroll getPayroll() {
+        return payroll;
+    }
+
+
 }

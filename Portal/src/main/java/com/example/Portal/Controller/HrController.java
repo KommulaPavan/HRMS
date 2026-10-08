@@ -1,7 +1,7 @@
 package com.example.Portal.Controller;
 
+
 import com.example.Portal.Dto.LeaveRequest;
-import com.example.Portal.Entity.Leave;
 import com.example.Portal.Service.HrService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

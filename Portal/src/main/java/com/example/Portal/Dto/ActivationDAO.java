@@ -1,8 +1,9 @@
 package com.example.Portal.Dto;
 
+
+
+
 import com.example.Portal.Entity.Employee;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
 
 import java.time.LocalDateTime;
 

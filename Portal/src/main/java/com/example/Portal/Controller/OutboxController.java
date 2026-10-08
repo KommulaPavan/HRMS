@@ -1,5 +1,6 @@
 package com.example.Portal.Controller;
 
+
 import com.example.Portal.Dto.OutboxDTO;
 import com.example.Portal.Service.OutboxService;
 import org.springframework.beans.factory.annotation.Autowired;

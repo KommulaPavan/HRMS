@@ -1,10 +1,6 @@
 package com.example.Portal.Dto;
 
 import com.example.Portal.Entity.Employee;
-import com.example.Portal.Entity.Role;
-
-
-import java.util.Set;
 
 public class EmployeeRequest {
     private Long id;

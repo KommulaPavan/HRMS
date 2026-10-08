@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity
 @Table(name = "attandance",
@@ -21,14 +20,16 @@ public class Attandance {
     private LocalDateTime checkInAt;
     private LocalDateTime checkOutAt;
     private int workMinutes;
-//    @Column(name = "employeeId", nullable = false, length = 64)
-//   private String employeeId;
+//    @Column(name = "empId", nullable = false, length = 64)
+//    private String employeeId;
+    @Enumerated(EnumType.STRING)
+    private com.example.Portal.Entity.AttandanceStatus status;
     private String source;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="employee_id")
-    private Employee employee;
+    @JoinColumn(name="EMPLOYEE_ID")
+    private com.example.Portal.Entity.Employee employee;
 
     public Long getId() {
         return id;
@@ -98,11 +99,27 @@ public class Attandance {
         this.source = source;
     }
 
-    public Employee getEmployee() {
+    public com.example.Portal.Entity.Employee getEmployee() {
         return employee;
     }
 
-    public void setEmployee(Employee employee) {
+    public void setEmployee(com.example.Portal.Entity.Employee employee) {
         this.employee = employee;
+    }
+
+//    public String getEmployeeId() {
+//        return employeeId;
+//    }
+//
+//    public void setEmployeeId(String employeeId) {
+//        this.employeeId = employeeId;
+//    }
+
+    public com.example.Portal.Entity.AttandanceStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(com.example.Portal.Entity.AttandanceStatus status) {
+        this.status = status;
     }
 }
