@@ -1305,25 +1305,6 @@ Git/GitHub
 
 ---
 
-# 💼 Resume Description
-
-### HRMS – Human Resource Management System
-
-Developed an enterprise-style **Human Resource Management System using Java 21 and Spring Boot**, implementing employee lifecycle management, JWT-based authentication, role-based authorization, employee profiles, attendance, leave management, payroll, training, performance reviews, announcements and job openings. Implemented **RestTemplate and OpenFeign** for service communication and **Apache Kafka** for asynchronous payroll events and notifications. Integrated Oracle Database using JPA/Hibernate, email notifications using JavaMailSender, PDF payslip generation, and containerized deployment using **Docker, Docker Compose and Kubernetes**. Added **SonarQube** integration for code quality analysis.
-
----
-
-# 🗣️ Interview Project Explanation
-
-> "I developed an HRMS application using Java 21 and Spring Boot. The system provides different functionality for employees, HR and administrators. I implemented JWT-based authentication and role-based authorization using Spring Security.
->
-> The major modules include employee management, employee profiles, attendance, leave management, announcements, job openings, training, employee reviews and payroll.
->
-> For payroll processing, the application retrieves employee and attendance information through service clients, calculates paid days, gross salary, PF, tax and net salary, saves the payroll record and publishes a payroll event through Kafka.
->
-> I used RestTemplate and OpenFeign for service-to-service communication, Oracle with JPA/Hibernate for persistence, JavaMailSender for email notifications and OpenPDF for payslip generation.
->
-> For deployment, I containerized the application using Docker and Docker Compose and also created Kubernetes deployment and service configurations. I also integrated SonarQube for code quality analysis."
 
 ---
 
